@@ -4,14 +4,12 @@
   "description": "A GroupMe group chat govenor",
   "main": "index.ts",
   "scripts": {
-    "prestart": "npm remove tsc",
-    "start": "./node_modules/.bin/tsc --module commonjs --outDir build/ --noImplicitAny --sourceMap --target ES5 index.ts && node build/index.js",
-    "build:live": "nodemon --exec .\\node_modules\\.bin\\ts-node -- .\\index.ts"
+    "prestart": "./node_modules/.bin/tsc --module commonjs --outDir build/ --noImplicitAny --sourceMap --target ES5 index.ts ",
+    "start": "node build/index.js"
   },
   "dependencies": {
     "cool-ascii-faces": "~1.3.x",
     "fancy-groupme-bot": "^0.1.3",
-    "rimraf": "^2.5.4",
     "typescript": "^2.1.5"
   },
   "engines": {
@@ -28,8 +26,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^7.0.0",
-    "nodemon": "^1.11.0",
-    "ts-node": "^2.0.0"
+    "@types/node": "^7.0.0"
   }
 }
