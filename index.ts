@@ -28,12 +28,11 @@ class Trait {
 }
 
 class HelloTrait extends Trait {
-  name: string = "HelloTrait";
   onMessage(message: any) {
     this.bot.message(`You said ${message.text}`);
   }
   onRegister() {
-    
+    this.name = "HelloTrait";
     this.bot.message(`Hello, I am ${this.name}`);
   }
 }
