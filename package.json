@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "cool-ascii-faces": "~1.3.x",
-    "fancy-groupme-bot": "^0.1.3"
+    "fancy-groupme-bot": "^0.1.3",
+    "tsc": "^1.20150623.0"
   },
   "engines": {
     "node": "0.10.x"
