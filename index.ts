@@ -19,7 +19,7 @@ class Trait {
     this.bot.on('botMessage', this.onMessage.bind(this));
     this.onRegister();
   }
-  onMessage(message: any) {
+  onMessage(bot:any, message: any) {
     
   }
   onRegister() {
@@ -28,7 +28,7 @@ class Trait {
 }
 
 class HelloTrait extends Trait {
-  onMessage(message: any) {
+  onMessage(bot: any, message: any) {
     console.log("Message received", message);
     this.bot.message(`You said ${message.text}`);
   }
