@@ -28,16 +28,17 @@ class Trait {
 }
 
 class HelloTrait extends Trait {
-  name: "HelloTrait";
-  onMessage(message) {
+  name: string = "HelloTrait";
+  onMessage(message: any) {
     this.bot.message(`You said ${message.text}`);
   }
   onRegister() {
+    
     this.bot.message(`Hello, I am ${this.name}`);
   }
 }
 
-mybot.on('botRegistered', function(bot) {
+mybot.on('botRegistered', function(bot: any) {
   let traits = [HelloTrait]
 
   traits.forEach((trait) => new trait(bot))
